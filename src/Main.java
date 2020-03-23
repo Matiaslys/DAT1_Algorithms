@@ -20,19 +20,23 @@ public class Main {
     private static final int N = 700; // Change the value of N for more or less iterations
 
     public static void main(String[] args) {
-
+        int[] data = {3,5,4,8,6,4,8,7,2,4,7,6,5,2};
         long startTime = MyTimer.currentTimestamp();
 
         Date date=new Date(startTime);
         System.out.println("Time is " + date.toString() + " (" + date.getTime() + ")\n");
         System.out.println("Calculation starting.");
-
-        myAlgorithm(); // Replace this with your own algorithm
+        System.out.println(Sorteringsalgoritmer.Bubble(data));
+        System.out.println(Sorteringsalgoritmer.Insertion(data));
+        System.out.println(Søgealgoritme.find(data, 2));
+        System.out.println(Søgealgoritme.findAlle(data, 2));
+        System.out.println(Søgealgoritme.findMax(data));
 
         long endTime = MyTimer.currentTimestamp();
-        String resultat = MyTimer.timeElapsed(startTime, endTime) ;
+        String resultat = MyTimer.timeElapsed(startTime, endTime);
         System.out.println();
         System.out.println(resultat);
+
     }
 
 
